@@ -1,5 +1,7 @@
 <template>
-  <div class="write"></div>
+  <div class="write">
+    <h1>Write!</h1>
+  </div>
 </template>
 
 <script>
