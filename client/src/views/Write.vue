@@ -1,10 +1,10 @@
 <template>
-  <div class="home"></div>
+  <div class="write"></div>
 </template>
 
 <script>
 export default {
-  name: "home",
+  name: "write",
   props: [],
   data() {
     return {};
