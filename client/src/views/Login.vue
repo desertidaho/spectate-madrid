@@ -55,6 +55,14 @@
                   placeholder="Create a password..."
                 >
               </div>
+              <div class="col-12 d-flex justify-content-center mt-2">
+                <input
+                  class="form-control shadow"
+                  type="text"
+                  v-model="secret"
+                  placeholder="Secret..."
+                >
+              </div>
               <div class="col-12 d-flex justify-content-center">
                 <button
                   :class="{disabled: isDisabled}"
@@ -97,7 +105,8 @@ export default {
         email: "",
         password: "",
         userName: ""
-      }
+      },
+      secret: ""
     };
   },
   computed: {
@@ -111,8 +120,14 @@ export default {
   },
   methods: {
     register() {
-      this.$store.dispatch("register", this.newUser);
-      this.loginForm = !this.loginForm;
+      if (this.secret == "ZadenIsCool") {
+        this.$store.dispatch("register", this.newUser);
+        this.loginForm = !this.loginForm;
+      } else {
+        this.newUser = {};
+        alert("You don't know the secret. You can't register.");
+        this.loginForm = !this.loginForm;
+      }
     },
     loginUser() {
       this.$store.dispatch("login", this.creds);
