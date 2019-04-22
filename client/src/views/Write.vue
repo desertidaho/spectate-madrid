@@ -21,7 +21,7 @@
           </form>
         </div>
         <div class="col-12 col-md-5 my-5 mt-md-0 d-flex justify-content-start stories">
-          <ul class="ml-0 ml-md-4">
+          <ul class="ml-0 ml-md-4 text-left">
             <li v-for="story in stories" :key="story._id" class="text-white">
               {{story.title}}
               <span class="ml-1 ml-md-3">{{story.createdAt | formatTime}}</span>
@@ -41,9 +41,6 @@
   export default {
     name: "write",
     props: [],
-    beforeMount() {
-
-    },
     mounted() {
       this.getStories();
       if (!this.user._id) {
@@ -97,7 +94,7 @@
 
 <style scoped>
   .write {
-    min-height: 100vh;
+    min-height: 110vh;
     background-color: black;
   }
 

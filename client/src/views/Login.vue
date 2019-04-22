@@ -107,16 +107,16 @@
   };
 </script>
 
-<style>
+<style scoped>
   .login {
     background-color: black;
     min-height: 100vh;
-    overflow-x: hidden !important;
   }
 
   .main {
     margin: 0px 0px;
     padding: 0px 0px;
+    margin-left: -1.2vw;
   }
 
   form {
@@ -130,6 +130,10 @@
   @media only screen and (max-width: 768px) {
     .form-control {
       min-width: 75vw !important;
+    }
+
+    .main {
+      margin-left: -4.3vw;
     }
   }
 </style>

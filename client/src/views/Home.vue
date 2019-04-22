@@ -8,7 +8,8 @@
             <!-- put cards here -->
             <ul class="ml-0 ml-md-4">
               <li v-for="story in stories" :key="story._id" class="text-white">
-                {{story.title}} <img :src="story.image" alt="">
+                {{story.title}}
+                <img :src="story.image" alt>
                 <span class="ml-1 ml-md-3">{{story.createdAt | formatTime}}</span>
                 <i class="fas fa-trash text-light ml-2 ml-md-4" @click="deleteStory(story)"></i>
               </li>
@@ -21,62 +22,61 @@
 </template>
 
 <script>
-  import Navbar from "@/components/Navbar.vue";
-  import Moment from "moment";
+import Navbar from "@/components/Navbar.vue";
+import Moment from "moment";
 
-  export default {
-    name: "home",
-    props: [],
-    mounted() {
-      this.adminUser()
-      this.getStories();
+export default {
+  name: "home",
+  props: [],
+  mounted() {
+    this.adminUser();
+    this.getStories();
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
     },
-    data() {
-      return {
-
-      };
-    },
-    computed: {
-      user() {
-        return this.$store.state.user;
-      },
-      stories() {
-        return this.$store.state.stories;
+    stories() {
+      return this.$store.state.stories;
+    }
+  },
+  methods: {
+    adminUser() {
+      if (this.user._id) {
       }
     },
-    methods: {
-      adminUser() {
-        if (this.user._id) {
-        }
-      },
-      getStories() {
-        this.$store.dispatch("getStories");
-      },
-    },
-    components: {
-      Navbar
-    },
-    filters: {
-      formatTime(date) {
-        if (Moment(String(date)).format("LT, L") == "Invalid date") {
-          return "Just now";
-        } else {
-          return Moment(String(date)).format("L");
-        }
+    getStories() {
+      this.$store.dispatch("getStories");
+    }
+  },
+  components: {
+    Navbar
+  },
+  filters: {
+    formatTime(date) {
+      if (Moment(String(date)).format("LT, L") == "Invalid date") {
+        return "Just now";
+      } else {
+        return Moment(String(date)).format("L");
       }
     }
-  };
+  }
+};
 </script>
 
 <style scoped>
-  template {
-    overflow-x: hidden !important;
-  }
+#home {
+  background-color: black;
+  margin-left: -1vw;
+  max-width: 100%;
+}
 
+@media only screen and (max-width: 768px) {
   #home {
-    min-height: 100vh;
-    min-width: 100% !important;
-    background-color: black;
-    overflow-x: hidden !important;
+    margin-left: -4.5vw;
   }
+}
 </style>
