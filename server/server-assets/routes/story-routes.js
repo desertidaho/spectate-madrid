@@ -15,7 +15,6 @@ router.get('/', (req, res, next) => {
 
 //POST - CREATE NEW STORY
 router.post('/', (req, res, next) => {
-  // req.body.userId = req.session.uid
   Story.create(req.body)
     .then(newStory => {
       res.send(newStory)
@@ -50,25 +49,20 @@ router.post('/', (req, res, next) => {
 
 
 //DELETE - DELETE A STORY
-// router.delete('/:id/:storyId', (req, res, next) => {
-//   Story.findOne({ userId: req.params.id && req.session.uid })
-//     .then(story => {
-//       story.storySchedule.forEach((e, index) => {
-//         if (e.id.toString() == req.params.scheduleId) {
-//           story.storySchedule.splice(index, 1)
-//         }
-//       })
-//       story.save(err => {
-//         if (err) {
-//           return res.status(400).send(err)
-//         }
-//         res.send(story)
-//       })
-//     })
-//     .catch(err => {
-//       res.status(400).send('ACCESS DENIED; Invalid Request')
-//     })
-// })
+router.delete('/:storyId', (req, res, next) => {
+  Story.findOneAndRemove({ _id: req.params.storyId })
+    .then(story => {
+      story.save(err => {
+        if (err) {
+          return res.status(400).send(err)
+        }
+        res.send(story)
+      })
+    })
+    .catch(err => {
+      res.status(400).send('ACCESS DENIED; Invalid Request')
+    })
+})
 
 
 module.exports = router

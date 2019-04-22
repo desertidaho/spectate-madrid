@@ -72,6 +72,7 @@ export default new Vuex.Store({
       auth.delete('logout', creds)
         .then(res => {
           commit('setUser', {})
+          commit('getAllStories', [])
           router.push({ name: 'login' })
         })
     },
@@ -94,6 +95,13 @@ export default new Vuex.Store({
       api.get('story')
         .then(res => {
           commit('getAllStories', res.data)
+        })
+    },
+
+    deleteStory({ commit, dispatch }, story) {
+      api.delete(`story/${story._id}`)
+        .then(res => {
+          dispatch('getStories')
         })
     }
 

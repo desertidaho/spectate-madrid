@@ -30,6 +30,9 @@ let auth = require('./server-assets/auth/routes')
 server.use(auth.session)
 server.use(auth.router)
 
+let storyRoutes = require('./server-assets/routes/story-routes')
+server.use('/api/story', storyRoutes)
+
 //Gate Keeper Must login to access any route below this code
 server.use((req, res, next) => {
   if (!req.session.uid) {
@@ -42,10 +45,10 @@ server.use((req, res, next) => {
 
 //YOUR ROUTES HERE
 let userRoutes = require('./server-assets/routes/user-routes')
-let storyRoutes = require('./server-assets/routes/story-routes')
+// let storyRoutes = require('./server-assets/routes/story-routes')
 
 server.use('/api/user', userRoutes)
-server.use('/api/story', storyRoutes)
+// server.use('/api/story', storyRoutes)
 
 server.use('*', (err, req, res, next) => {
   console.error(err)
