@@ -85,7 +85,7 @@
         if (Moment(String(date)).format("LT, L") == "Invalid date") {
           return "Just now";
         } else {
-          return Moment(String(date)).format("L");
+          return Moment(String(date)).format("LL");
         }
       }
     }
