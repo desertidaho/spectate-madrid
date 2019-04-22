@@ -91,8 +91,8 @@
   }
 
   @media only screen and (max-width: 768px) {
-    .soccerball {
-      display: none;
+    #home {
+      margin-left: -4.5vw;
     }
   }
 </style>
