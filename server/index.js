@@ -42,8 +42,10 @@ server.use((req, res, next) => {
 
 //YOUR ROUTES HERE
 let userRoutes = require('./server-assets/routes/user-routes')
+let storyRoutes = require('./server-assets/routes/story-routes')
 
 server.use('/api/user', userRoutes)
+server.use('/api/story', storyRoutes)
 
 server.use('*', (err, req, res, next) => {
   console.error(err)

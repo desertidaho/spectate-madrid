@@ -20,13 +20,19 @@ let api = Axios.create({
 
 export default new Vuex.Store({
   state: {
-    user: {}
-
+    user: {},
+    stories: []
   },
   mutations: {
     // creates user when register
     setUser(state, user) {
       state.user = user
+    },
+    addStory(state, data) {
+      state.stories.unshift(data)
+    },
+    getAllStories(state, data) {
+      state.stories = data
     }
   },
   actions: {
@@ -69,6 +75,27 @@ export default new Vuex.Store({
           router.push({ name: 'login' })
         })
     },
+
+    //#endregion
+
+    //#region -- STORY STUFF --
+
+    newStory({ commit, dispatch }, newStory) {
+      api.post('story', newStory)
+        .then(res => {
+          commit('addStory', newStory)
+        })
+        .catch(res => {
+          console.log(res)
+        })
+    },
+
+    getStories({ commit, dispatch }) {
+      api.get('story')
+        .then(res => {
+          commit('getAllStories', res.data)
+        })
+    }
 
     //#endregion
 
