@@ -92,7 +92,9 @@
           this.$store.dispatch("register", this.newUser);
           this.loginForm = !this.loginForm;
         } else {
-          this.newUser = {};
+          this.newUser.email = ''
+          this.newUser.password = ''
+          this.newUser.userName = ''
           alert("You don't know the secret. You can't register.");
           this.loginForm = !this.loginForm;
         }

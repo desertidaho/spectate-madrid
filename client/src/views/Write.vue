@@ -15,7 +15,7 @@
               <textarea v-model="newStory.story" type="text" class="form-control story" id
                 placeholder="Story..."></textarea>
             </div>
-            <div class="col-12 mt-3">
+            <div class="col-12 mt-3 text-left">
               <button type="submit" class="btn btn-success">Submit</button>
             </div>
           </form>
