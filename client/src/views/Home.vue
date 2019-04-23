@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
           <a href="https://twitter.com/spectatemadrid" target="_blank"><i
-              class="fab fa-twitter text-primary fa-2x mb-3 mr-md-3"></i></a>
+              class="fab fa-twitter text-primary fa-2x mb-3"></i></a>
         </div>
       </div>
       <div class="row mt-2">

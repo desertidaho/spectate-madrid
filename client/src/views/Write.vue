@@ -9,7 +9,7 @@
               <input v-model="newStory.title" type="text" class="form-control" id placeholder="Title of new story">
             </div>
             <div class="col-12 mt-2">
-              <input v-model="newStory.image" type="text" class="form-control" id placeholder="Image UrL...">
+              <input v-model="newStory.image" type="text" class="form-control" id placeholder="Image URL...">
             </div>
             <div class="col-12 mt-2">
               <textarea v-model="newStory.story" type="text" class="form-control story" id

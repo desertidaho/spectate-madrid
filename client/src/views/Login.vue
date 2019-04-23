@@ -56,7 +56,7 @@
 </template>
 
 <script>
-  import router from "@/router.js";
+  // import router from "@/router.js";
   import Navbar from "@/components/Navbar.vue";
 
   export default {
