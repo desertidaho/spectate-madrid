@@ -29,7 +29,6 @@
   body {
     background-color: black !important;
     min-height: 100vh;
-    /* width: 100% !important; */
     overflow-x: hidden !important;
   }
 </style>
