@@ -4,7 +4,7 @@ import Axios from 'axios'
 import router from './router'
 
 Vue.use(Vuex)
-let base = window.location.host.includes('localhost:8080') ? '//localhost:3000/' : '//spectatemadrid.com/';
+let base = window.location.host.includes('localhost:8080') ? '//localhost:3000/' : '//www.spectatemadrid.com/';
 
 let auth = Axios.create({
   baseURL: base + "auth/",
