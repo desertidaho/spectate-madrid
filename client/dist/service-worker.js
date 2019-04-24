@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a4ca63212c53d3f7d1ca5c9e353ec5a5.js"
+  "/precache-manifest.7c9766eab23e1c944ce78eb1c3cb5ca2.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "spectatemadrid"});

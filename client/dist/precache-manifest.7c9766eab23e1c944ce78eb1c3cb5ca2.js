@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "54c23d9f758c1bd1ece3",
+    "revision": "779848b96c66a818d1a0",
     "url": "/css/app.8e93e3d9.css"
   },
   {
-    "revision": "54c23d9f758c1bd1ece3",
-    "url": "/js/app.c1cce51b.js"
+    "revision": "779848b96c66a818d1a0",
+    "url": "/js/app.25eb4ab5.js"
   },
   {
     "revision": "02de75655e3c3f4dae17",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/img/spectate-logo.300b520c.png"
   },
   {
-    "revision": "46ebb000ba802e793963bb7eff410781",
+    "revision": "2d0a52f2833c2cc51d8c629f406d792c",
     "url": "/index.html"
   },
   {
