@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/img/spectate-logo.300b520c.png"
   },
   {
-    "revision": "51aec0a2bca2d471d43e8b04416f621a",
+    "revision": "42434efd90b52ef56cdedf2485163d9e",
     "url": "/index.html"
   },
   {
