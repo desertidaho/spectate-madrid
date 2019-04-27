@@ -86,20 +86,21 @@
   }
 
   .img-fluid {
-    width: 100vw;
+    max-width: 93vw;
     object-fit: cover;
     border-bottom: 2px solid white;
   }
 
   .card {
+    width: 93vw;
     border: 2px solid white;
     box-shadow: 2px 3px rgb(134, 134, 134);
   }
 
   .card,
   .time {
-    background-color: rgb(58, 58, 58);
-    color: white;
+    background-color: white;
+    color: black;
   }
 
   p {
