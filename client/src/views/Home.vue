@@ -1,5 +1,5 @@
 <template>
-  <div class="home" id="home">
+  <div class="home">
     <navbar></navbar>
     <div class="container-fluid">
       <div class="row">
@@ -8,10 +8,10 @@
               class="fab fa-twitter text-primary fa-2x mb-3"></i></a>
         </div>
       </div>
-      <div class="row mt-2">
-        <div class="col-10 offset-1 col-md-10 offset-md-1 d-flex justify-content-center">
-          <div class="card-columns">
-            <div class="card col-12 mb-4 px-0 mr-0" v-for="story in stories" :key="story._id">
+      <div class="row">
+        <div class="col-12 px-0 mx-0">
+          <div class="card-columns container">
+            <div class="card col-12 mb-4 px-0 mx-0" v-for="story in stories" :key="story._id">
               <img class="card-img-top img-fluid" :src="story.image" alt="Card image cap">
               <div class="card-body text-left">
                 <h5 class="card-title">{{story.title}}</h5>
@@ -75,10 +75,8 @@
 </script>
 
 <style scoped>
-  #home {
-    background-color: black;
+  .home {
     margin-left: -1vw;
-    max-width: 100%;
   }
 
   .card-columns {
@@ -86,15 +84,14 @@
   }
 
   .img-fluid {
-    max-width: 93vw;
     object-fit: cover;
     border-bottom: 2px solid white;
   }
 
   .card {
-    width: 93vw;
+    width: 95% !important;
     border: 2px solid white;
-    box-shadow: 2px 3px rgb(134, 134, 134);
+    box-shadow: 2px 2px rgb(134, 134, 134);
   }
 
   .card,
@@ -108,10 +105,6 @@
   }
 
   @media only screen and (max-width: 768px) {
-    #home {
-      margin-left: -3vw;
-    }
-
     .card-columns {
       column-count: 1;
     }

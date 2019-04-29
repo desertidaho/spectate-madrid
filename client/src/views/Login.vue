@@ -1,5 +1,5 @@
 <template>
-  <div class="login text-center">
+  <div class="login">
     <navbar></navbar>
     <div class="container-fluid">
       <div class="row mt-4 main">
@@ -56,7 +56,6 @@
 </template>
 
 <script>
-  // import router from "@/router.js";
   import Navbar from "@/components/Navbar.vue";
 
   export default {
@@ -113,6 +112,7 @@
   .login {
     background-color: black;
     min-height: 100vh;
+    margin-right: -5vw !important;
   }
 
   .main {
@@ -130,6 +130,10 @@
   }
 
   @media only screen and (max-width: 768px) {
+    .login {
+      margin-right: -16vw !important;
+    }
+
     .form-control {
       min-width: 75vw !important;
     }

@@ -13,7 +13,7 @@
     <button v-if="atHome && user._id" class="btn btn-sm btn-outline-primary shadow mt-2 home"
       @click="write()">Write</button>
     <button v-if="user._id" class="btn btn-sm btn-outline-danger shadow mt-2 logout" @click="logout()">Logout</button>
-    <button v-if="!user._id && !atLogin" class="btn btn-sm btn-outline-secondary shadow mt-2 logout"
+    <button v-if="!user._id && !atLogin" class="btn btn-sm btn-outline-secondary shadow mt-2 login"
       @click="login()">Login</button>
   </div>
 </template>
@@ -84,15 +84,25 @@
     left: 0.8rem;
   }
 
+  .login {
+    position: absolute;
+    top: 0.3rem;
+    right: 3rem;
+  }
+
   .logout {
     position: absolute;
     top: 0.3rem;
-    right: 0.8rem;
+    right: 3rem;
   }
 
   @media only screen and (max-width: 768px) {
     #home {
       margin-left: -4.5vw;
+    }
+
+    .logout {
+      right: 2rem;
     }
   }
 </style>

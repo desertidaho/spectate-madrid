@@ -96,6 +96,7 @@
   .write {
     min-height: 110vh;
     background-color: black;
+    margin-left: 1vw;
   }
 
   form {
