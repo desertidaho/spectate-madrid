@@ -29,6 +29,6 @@
   body {
     background-color: black !important;
     min-height: 100vh;
-    /* overflow-x: hidden !important; */
+    overflow-x: hidden !important;
   }
 </style>
