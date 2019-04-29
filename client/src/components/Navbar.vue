@@ -97,12 +97,12 @@
   }
 
   @media only screen and (max-width: 768px) {
-    #home {
-      margin-left: -4.5vw;
+    .login {
+      right: 1.7rem;
     }
 
     .logout {
-      right: 2rem;
+      right: 1.7rem;
     }
   }
 </style>

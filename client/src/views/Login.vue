@@ -131,7 +131,7 @@
 
   @media only screen and (max-width: 768px) {
     .login {
-      margin-right: -16vw !important;
+      margin-right: -10vw !important;
     }
 
     .form-control {

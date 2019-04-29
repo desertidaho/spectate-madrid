@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-12 px-0 mx-0">
+        <div class="col-12 px-0 mx-0 mt-3">
           <div class="card-columns container">
             <div class="card col-12 mb-4 px-0 mx-0" v-for="story in stories" :key="story._id">
               <img class="card-img-top img-fluid" :src="story.image" alt="Card image cap">
